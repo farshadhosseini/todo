@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="./src/js/main.js" defer></script>
+    <link href="./src/dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="flex flex-col items-center h-screen">
+    <header class="fixed top-0 bg-slate-500 w-full flex justify-center py-5">
+        <div class="w-11/12 sm:w-8/12 text">
+            <section class="relative w-full mr-1">
+                <input id="task-text" placeholder="write your task, select priority ..." type="text" class="border border-solid border-gray-300 w-full rounded-md outline-none p-2">
+                <button id="submitBtn" onclick="setTask()" class="absolute right-0 bottom-0 top-0 rounded-r-md px-3 bg-emerald-500 rounded-sm text-white hover:bg-emerald-600">Submit</button>
+            </section>
+            <section class="flex gap-1 mt-2">
+                <div data-id="1" class="cursor-pointer priority bg-rose-600 w-[50px] h-[20px] rounded-full px-1 text-white hover:bg-rose-500 flex items-center justify-center"><span class="fa fa-check"></span></div>
+                <div data-id="2" class="cursor-pointer priority bg-cyan-500 w-[50px] h-[20px] rounded-full px-1 text-white hover:bg-cyan-400 flex items-center justify-center"></div>
+                <div data-id="3" class="cursor-pointer priority bg-amber-400 w-[50px] h-[20px] rounded-full px-1 text-white hover:bg-amber-300 flex items-center justify-center"></div>
+            </section>
+        </div>
+    </header>
+        <main class="mt-[120px] w-full sm:w-8/12 container">
+            <article class="flex text-justify mb-2 border border-solid border-gray-200 mx-1 rounded-sm p-2">
+                <div class="px-2 w-full flex items-center"></div>
+                <div class="ml-auto flex gap-1 flex-col sm:flex-row sm:items-center">
+                    <button class="bg-teal-600 rounded-full w-[30px] h-[30px] text-white hover:bg-teal-500 "><span class="fa fa-check fa-xs"></span></button>
+                    <button class="bg-amber-500 rounded-full w-[30px] h-[30px] text-white hover:bg-amber-400"><span class="fa fa-pen fa-xs"></span></button>
+                    <button class="bg-rose-600 rounded-full w-[30px] h-[30px] text-white hover:bg-rose-500"><span class="fa fa-times fa-xs"></span></button>
+                </div>
+            </article>           
+        </main>          
+</body>
+</html>
